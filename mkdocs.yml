@@ -3,6 +3,7 @@ site_description: Mostly technical and Oracle-related but not always.
 site_url: https://sitename.example
 theme:
   name: material
+  custom_dir: overrides
   font:
     #text: Merriweather Sans
     code: Red Hat Mono
@@ -33,6 +34,17 @@ plugins:
 
   - tags:
       tags_file: tags.md
+
+  - git-committers:
+      enabled: true
+      repository: OracleGJB/sparta
+      branch: main
+      token: !ENV GH_TOKEN
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: false
+      enable_creation_date: true
+      enabled: true
 
 extra:
   social:
