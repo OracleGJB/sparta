@@ -1,4 +1,49 @@
-site_name: My Docs
+site_name: Graham Bailey - Blog
+site_description: Mostly technical and Oracle-related but not always.
 site_url: https://sitename.example
 theme:
   name: material
+  font:
+    #text: Merriweather Sans
+    code: Red Hat Mono
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: yellow
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: red
+
+plugins:
+  - search
+  - blog:
+      blog_dir: .
+      archive_date_format: yyyy MM
+      archive_url_date_format: yyyy MM
+      post_url_format: "{slug}"
+
+  - tags:
+      tags_file: tags.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/grahamjohnbailey/
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/OracleGJB/
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
