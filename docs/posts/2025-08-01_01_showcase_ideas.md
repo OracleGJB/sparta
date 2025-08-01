@@ -13,8 +13,7 @@ authors:
   - graham
 ---
 
-# Showcase Ideas - My First Blog Post
-
+# Showcase Ideas
 I've got a great idea but I'm only supposed to blow the bloody doors off!
 
 <!-- more -->
